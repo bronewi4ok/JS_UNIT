@@ -1,21 +1,26 @@
 "use strict";
-// Callback, lesson 19
 
-function first() {
-    setTimeout(
-        function () {
-            console.log("first");
-        }, 500
-    );
+// 20 Objects
+
+const options = {
+    name: "test",
+    width: 1024,
+    height: 1024,
+    color: {
+        border: "black",
+        bg: "red",
+    }
+};
+
+// console.log(options.name);
+// delete options.name;
+// console.log(options.name);
+
+for (let key in options) {
+    if (typeof (options[key]) === 'object') {
+        for (let i in options[key]) {
+
+        }
+        console.log(`свойтсво ${key} имеет занчение ${options[key]}`);
+    }
 }
-
-function second() {
-    console.log("second");
-}
-
-function learnJS(lang, callback) {
-    console.log(`Я учу ${lang}`);
-    callback();
-}
-
-learnJS("JavaScript", second);
