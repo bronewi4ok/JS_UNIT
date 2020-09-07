@@ -9,21 +9,27 @@ const options = {
     color: {
         border: "black",
         bg: "red",
+    },
+    makeTaste: function() {
+        console.log('test');
     }
 };
 
-let counter = 0;
-for (let key in options) {
-    if (typeof (options[key]) === 'object') {
-        for (let i in options[key]) {
-            console.log(`свойтсво ${i} имеет занчение ${options[key][i]}`);
-            counter++;
-        }
-    } else {
-        console.log(`свойтсво ${key} имеет занчение ${options[key]}`);
-        counter++;
-    }
-}
+console.log(Object.keys(options).length);
+options.makeTaste();
 
-console.log(counter);
-console.log('');
+// let counter = 0;
+// for (let key in options) {
+//     if (typeof (options[key]) === 'object') {
+//         for (let i in options[key]) {
+//             console.log(`свойтсво ${i} имеет занчение ${options[key][i]}`);
+//             counter++;
+//         }
+//     } else {
+//         console.log(`свойтсво ${key} имеет занчение ${options[key]}`);
+//         counter++;
+//     }
+// }
+
+// console.log(counter);
+// console.log('');
